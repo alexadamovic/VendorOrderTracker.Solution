@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using VendorOrderTracker.Models;
 using System;
+using System.Collections.Generic;
 
 namespace VendorOrderTracker.Tests
 {
@@ -61,6 +62,16 @@ namespace VendorOrderTracker.Tests
       Order newOrder = new Order("Title", "Description", "Price", "Date");
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsAllOrderObjects_OrderList()
+    {
+      Order newOrder1 = new Order("Title1", "Description1", "Price1", "Date1");
+      Order newOrder2 = new Order("Title2", "Description2", "Price2", "Date2");
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
     
   }
