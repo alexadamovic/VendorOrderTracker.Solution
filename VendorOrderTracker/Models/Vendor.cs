@@ -8,7 +8,7 @@ namespace VendorOrderTracker.Models
 
     public Vendor(string name)
     {
-      
+      Name = name;
     }
   }
 }
