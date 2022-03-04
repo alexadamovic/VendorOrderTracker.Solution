@@ -30,5 +30,6 @@ namespace VendorOrderTracker.Tests
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
+    
   }
 }
