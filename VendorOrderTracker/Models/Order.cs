@@ -7,8 +7,9 @@ namespace VendorOrderTracker.Models
     public string Title { get; }
     public string Description { get; }
     public string Price { get; }
+    public string Date { get; }
 
-    public Order(string title, string description, string price)
+    public Order(string title, string description, string price, string date)
     {
       Title = title;
       Description = description;
