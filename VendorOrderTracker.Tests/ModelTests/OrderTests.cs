@@ -48,6 +48,14 @@ namespace VendorOrderTracker.Tests
       string result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void GetId_ReturnsOrderId_Int()
+    {
+      Order newOrder = new Order("Title", "Description", "Price", "Date");
+      int result = newOrder.Id;
+      Assert.AreEqual(1, result);
+    }
     
   }
 }
