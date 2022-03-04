@@ -21,5 +21,12 @@ namespace VendorOrderTracker.Models
     {
       _instances.Clear();
     }
+
+    public static List<Vendor> GetAll()
+    {
+      Vendor testVendor = new Vendor("Name", "Description");
+      List<Vendor> testList = new List<Vendor> { testVendor };
+      return testList;
+    }
   }
 }
