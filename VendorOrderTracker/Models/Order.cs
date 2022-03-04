@@ -28,9 +28,7 @@ namespace VendorOrderTracker.Models
 
     public static List<Order> GetAll()
     {
-      Order testOrder = new Order("Title", "Description", "Price", "Date");
-      List<Order> testList = new List<Order> { testOrder };
-      return testList;
+      return _instances;
     }
   }
 }
