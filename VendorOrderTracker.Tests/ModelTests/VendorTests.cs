@@ -55,5 +55,16 @@ namespace VendorOrderTracker.Tests
       List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void ClearAll_EmptiesInstancesList_VendorList()
+    {
+      Vendor newVendor1 = new Vendor("Name1", "Description1");
+      Vendor newVendor2 = new Vendor("Name2", "Description2");
+      Vendor.ClearAll();
+      List<Vendor> emptyList = new List<Vendor> {};
+      List<Vendor> allVendorsList = Vendor.GetAll();
+      CollectionAssert.AreEqual(emptyList, allVendorsList);
+    }
   }
 }
