@@ -30,5 +30,11 @@ namespace VendorOrderTracker.Models
     {
       return _instances;
     }
+
+    public static Order Find(int searchId)
+    {
+      Order testOrder = new Order("Title", "Description", "Price", "Date");
+      return testOrder;
+    }
   }
 }
